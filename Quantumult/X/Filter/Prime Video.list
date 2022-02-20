@@ -10,7 +10,7 @@ DOMAIN,atv-ps.amazon.com,Prime Video
 DOMAIN-SUFFIX,pv-cdn.net,Prime Video OTT
 DOMAIN-SUFFIX,aiv-cdn.net,Prime Video OTT
 DOMAIN-SUFFIX,aiv-delivery.net,Prime Video OTT
-//DOMAIN,avodmp4s3ww-a.akamaihd.net,Prime Video OTT
+DOMAIN,avodmp4s3ww-a.akamaihd.net,Prime Video OTT
 //DOMAIN,a46avodhlss3ww-a.akamaihd.net,Prime Video OTT
 DOMAIN,d1xfray82862hr.cloudfront.net,Prime Video OTT
 DOMAIN,d1v5ir2lpwr8os.cloudfront.net,Prime Video OTT
@@ -20,4 +20,4 @@ DOMAIN,d27xxe7juh1us6.cloudfront.net,Prime Video OTT
 DOMAIN,d3196yreox78o9.cloudfront.net,Prime Video OTT
 DOMAIN,dmqdd6hw24ucf.cloudfront.net,Prime Video OTT
 DOMAIN-KEYWORD,avoddashs,Prime Video OTT
-DOMAIN-KEYWORD,avod*3ww,Prime Video OTT
+DOMAIN-KEYWORD,avodhlss3ww-a,Prime Video OTT
