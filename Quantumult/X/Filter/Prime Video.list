@@ -4,12 +4,12 @@
 DOMAIN-SUFFIX,primevideo.com,Prime Video
 DOMAIN-SUFFIX,amazonvideo.com,Prime Video
 DOMAIN-SUFFIX,media-amazon.com,Prime Video
-DOMAIN-SUFFIX,pv-cdn.net,Prime Video
-DOMAIN-SUFFIX,aiv-cdn.net,Prime Video
-DOMAIN-SUFFIX,aiv-delivery.net,Prime Video
 // DOMAIN,www.amazon.com,Prime Video // 网页版 Prime Video 验证地区
 DOMAIN,ktpx.amazon.com,Prime Video
 DOMAIN,atv-ps.amazon.com,Prime Video
+DOMAIN-SUFFIX,pv-cdn.net,Prime Video OTT
+DOMAIN-SUFFIX,aiv-cdn.net,Prime Video OTT
+DOMAIN-SUFFIX,aiv-delivery.net,Prime Video OTT
 DOMAIN,avodmp4s3ww-a.akamaihd.net,Prime Video OTT
 DOMAIN,a46avodhlss3ww-a.akamaihd.net,Prime Video OTT
 DOMAIN,d1xfray82862hr.cloudfront.net,Prime Video OTT
