@@ -2,7 +2,7 @@
 USER-AGENT,BBCiPlayer*,BBC iPlayer
 DOMAIN-KEYWORD,bbcfmt,BBC iPlayer
 //DOMAIN-KEYWORD,co.uk,BBC iPlayer
-DOMAIN-KEYWORD,uk-live,OTT
+DOMAIN-KEYWORD,uk-live,BBC iPlayer
 DOMAIN-SUFFIX,bbc.com,BBC iPlayer
 DOMAIN-SUFFIX,bbc.co,BBC iPlayer
 DOMAIN-SUFFIX,bbc.co.uk,BBC iPlayer
