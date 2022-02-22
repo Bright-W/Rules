@@ -1,8 +1,10 @@
 # > iQIYI
+DOMAIN-SUFFIX,iqiyipic.com,OTT
+DOMAIN,chuangcachecdnoversea-tw.inter.iqiyi.com,OTT
+DOMAIN,huaweicdnoversea.inter.iq.com,OTT
 USER-AGENT,*QIYI*,iQIYI
 USER-AGENT,iQiYi*,iQIYI
 DOMAIN-SUFFIX,iqiyi.com,iQIYI
-DOMAIN-SUFFIX,iqiyipic.com,iQIYI
 DOMAIN-SUFFIX,iq.com,iQIYI
 DOMAIN-SUFFIX,qy.net,iQIYI
 DOMAIN-SUFFIX,gitv.tv,iQIYI
