@@ -1,0 +1,7 @@
+# > wavve
+// USER-AGENT,TVING*,wavve
+DOMAIN,apis.wavve.com,wavve
+DOMAIN,vod.sdn.wavve.com,wavve
+DOMAIN,img.wavve.com,wavve
+DOMAIN,uievent3.wavve.com,wavve
+//DOMAIN-SUFFIX,wavve.com,wavve
