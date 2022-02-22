@@ -1,5 +1,5 @@
 # > wavve
-// USER-AGENT,TVING*,wavve
+// USER-AGENT,wavve*,wavve
 DOMAIN,apis.wavve.com,wavve
 DOMAIN,vod.sdn.wavve.com,wavve
 DOMAIN,img.wavve.com,wavve
