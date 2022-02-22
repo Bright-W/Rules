@@ -1,5 +1,7 @@
 # > TVING
 // USER-AGENT,TVING*,Tving
 DOMAIN,pip-vod2-xcdn.tving.com,OTT
-DOMAIN-SUFFIX,tving.com,Tving
+DOMAIN,api.tving.com,Tving
+DOMAIN,aproxy-next.tving.com,Tving
+//DOMAIN-SUFFIX,tving.com,Tving
 //DOMAIN,image.pip.cjenm.com,Tving
