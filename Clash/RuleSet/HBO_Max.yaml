@@ -6,4 +6,4 @@ payload:
   # DOMAIN-SUFFIX,hbogo.com
   - DOMAIN-SUFFIX,hbonow.com
   - DOMAIN-SUFFIX,hbomax.com
-  - DOMAIN-SUFFIX,hbomaxcdn.com
+  #- DOMAIN-SUFFIX,hbomaxcdn.com
