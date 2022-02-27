@@ -3,7 +3,7 @@ payload:
   # USER-AGENT,*QIYI*
   # USER-AGENT,iQiYi*
   - DOMAIN-SUFFIX,iqiyi.com
-  - DOMAIN-SUFFIX,iqiyipic.com
+  #- DOMAIN-SUFFIX,iqiyipic.com
   - DOMAIN-SUFFIX,iq.com
   - DOMAIN-SUFFIX,qy.net
   - DOMAIN-SUFFIX,gitv.tv
