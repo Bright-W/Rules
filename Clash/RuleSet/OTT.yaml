@@ -17,3 +17,5 @@ payload:
  # > Disney+
   - DOMAIN-SUFFIX,dssott.com
   - DOMAIN,prod-ripcut-delivery.disney-plus.net
+ # > HBO MAX
+  - DOMAIN-SUFFIX,hbomaxcdn.com
