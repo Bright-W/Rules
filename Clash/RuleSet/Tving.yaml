@@ -1,7 +1,7 @@
 payload:
   # > TVING
 # USER-AGENT,TVING*,Tving
-  - DOMAIN,pip-vod2-xcdn.tving.com
+# - DOMAIN,pip-vod2-xcdn.tving.com
   - DOMAIN,api.tving.com
   - DOMAIN,aproxy-next.tving.com
 #DOMAIN-SUFFIX,tving.com
