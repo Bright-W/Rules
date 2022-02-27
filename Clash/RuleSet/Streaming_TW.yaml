@@ -45,7 +45,7 @@ payload:
   # > LINE TV
   # USER-AGENT,LINE%20TV*
   - DOMAIN-SUFFIX,linetv.tw
-  - DOMAIN,d3c7rimkq79yfu.cloudfront.net
+  #- DOMAIN,d3c7rimkq79yfu.cloudfront.net
   
   # > myVideo
   # USER-AGENT,myVideo*
@@ -56,4 +56,4 @@ payload:
   - DOMAIN,applemediaservice.keydelivery.southeastasia.media.azure.net
   - DOMAIN,akamaiendpoint-applemediaservice-aase.streaming.media.azure.net
 
-  - DOMAIN-KEYWORD,.tw
+  #- DOMAIN-KEYWORD,.tw
