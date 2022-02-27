@@ -1,6 +1,5 @@
 payload:
   # > Prime Video
-  - DOMAIN-SUFFIX,media.starott.com
   - DOMAIN-SUFFIX,pv-cdn.net
   - DOMAIN-SUFFIX,aiv-cdn.net
   - DOMAIN-SUFFIX,aiv-delivery.net
