@@ -14,3 +14,6 @@ payload:
   - DOMAIN,dmqdd6hw24ucf.cloudfront.net
   - DOMAIN-KEYWORD,avoddashs
   - DOMAIN-KEYWORD,avodhlss3ww-a
+ # > Disney+
+  - DOMAIN-SUFFIX,dssott.com
+  - DOMAIN,prod-ripcut-delivery.disney-plus.net
