@@ -19,6 +19,7 @@ payload:
   - DOMAIN,prod-ripcut-delivery.disney-plus.net
  # > HBO MAX
   - DOMAIN-SUFFIX,hbomaxcdn.com
+  - DOMAIN-SUFFIX,cdn.hbo.com
  # > Tving
   - DOMAIN,pip-vod2-xcdn.tving.com
  # > iQIYI
