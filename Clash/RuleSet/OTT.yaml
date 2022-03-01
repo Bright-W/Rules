@@ -24,10 +24,11 @@ payload:
   - DOMAIN,pip-vod2-xcdn.tving.com
  # > iQIYI
   - DOMAIN-SUFFIX,iqiyipic.com
-  - DOMAIN,chuangcachecdnoversea-tw.inter.iqiyi.com
-  - DOMAIN,chuangcachecdnoversea-tw.inter.iq.com
-  - DOMAIN,huaweicdnoversea.inter.iq.com
-  - DOMAIN,huaweicdnoversea.inter.iqiyi.com
+  - DOMAIN-SUFFIX,inter.iqiyi.com
+  #- DOMAIN,chuangcachecdnoversea-tw.inter.iqiyi.com
+  #- DOMAIN,chuangcachecdnoversea-tw.inter.iq.com
+  #- DOMAIN,huaweicdnoversea.inter.iq.com
+  #- DOMAIN,huaweicdnoversea.inter.iqiyi.com
  # > LINE TV
   - DOMAIN,d3c7rimkq79yfu.cloudfront.net
   - DOMAIN,d2dflkddhtkcl4.cloudfront.net
