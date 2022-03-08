@@ -35,3 +35,5 @@ payload:
   - DOMAIN,d2dflkddhtkcl4.cloudfront.net
   - DOMAIN,static.linetv.tw
   - DOMAIN,img.linetv.tw
+  # mubi
+  - DOMAIN-SUFFIX,mubicdn.net
