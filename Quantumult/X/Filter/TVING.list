@@ -1,7 +1,8 @@
 # > TVING
 // USER-AGENT,TVING*,Tving
-DOMAIN,pip-vod2-xcdn.tving.com,OTT
-DOMAIN,pip-movie-drm-xcdn.tving.com,OTT
+//DOMAIN,pip-vod2-xcdn.tving.com,OTT
+//DOMAIN,pip-movie-drm-xcdn.tving.com,OTT
+DOMAIN-KEYWORD,cdn.tving.com,OTT
 DOMAIN,cj.drmkeyserver.com.com,OTT
 DOMAIN,api.tving.com,Tving
 DOMAIN,aproxy-next.tving.com,Tving
