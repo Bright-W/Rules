@@ -35,5 +35,16 @@ payload:
   - DOMAIN,d2dflkddhtkcl4.cloudfront.net
   - DOMAIN,static.linetv.tw
   - DOMAIN,img.linetv.tw
-  # mubi
+  # Mubi
   - DOMAIN-SUFFIX,mubicdn.net
+  # Starz
+  - DOMAIN,mecdn1.starz.com
+  - DOMAIN,mecdn2.starz.com
+  - DOMAIN,mecdn3.starz.com
+  - DOMAIN,mecdn4.starz.com
+  - DOMAIN,mecdn5.starz.com
+  - DOMAIN,mecdn6.starz.com
+  - DOMAIN,mecdn7.starz.com
+  - DOMAIN,mecdn8.starz.com
+  - DOMAIN,mecdn9.starz.com
+  - DOMAIN,mecdn10.starz.com
