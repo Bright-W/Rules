@@ -6,13 +6,13 @@ payload:
   - DOMAIN-SUFFIX,aiv-delivery.net
   - DOMAIN,avodmp4s3ww-a.akamaihd.net
  #- DOMAIN,a46avodhlss3ww-a.akamaihd.net
-  - DOMAIN,d1xfray82862hr.cloudfront.net
-  - DOMAIN,d1v5ir2lpwr8os.cloudfront.net
-  - DOMAIN,d22qjgkvxw22r6.cloudfront.net
-  - DOMAIN,d25xi40x97liuc.cloudfront.net
-  - DOMAIN,d27xxe7juh1us6.cloudfront.net
-  - DOMAIN,d3196yreox78o9.cloudfront.net
-  - DOMAIN,dmqdd6hw24ucf.cloudfront.net
+ # - DOMAIN,d1xfray82862hr.cloudfront.net
+ # - DOMAIN,d1v5ir2lpwr8os.cloudfront.net
+ # - DOMAIN,d22qjgkvxw22r6.cloudfront.net
+ # - DOMAIN,d25xi40x97liuc.cloudfront.net
+ # - DOMAIN,d27xxe7juh1us6.cloudfront.net
+ # - DOMAIN,d3196yreox78o9.cloudfront.net
+ # - DOMAIN,dmqdd6hw24ucf.cloudfront.net
   - DOMAIN-KEYWORD,avoddashs
   - DOMAIN-KEYWORD,avodhlss3ww-a
  # > Disney+
@@ -35,8 +35,8 @@ payload:
   #- DOMAIN,huaweicdnoversea.inter.iq.com
   #- DOMAIN,huaweicdnoversea.inter.iqiyi.com
  # > LINE TV
-  - DOMAIN,d3c7rimkq79yfu.cloudfront.net
-  - DOMAIN,d2dflkddhtkcl4.cloudfront.net
+  #- DOMAIN,d3c7rimkq79yfu.cloudfront.net
+  #- DOMAIN,d2dflkddhtkcl4.cloudfront.net
   - DOMAIN,static.linetv.tw
   - DOMAIN,img.linetv.tw
   # Mubi
