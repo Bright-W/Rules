@@ -22,6 +22,8 @@ payload:
   - DOMAIN-SUFFIX,cdn.hbo.com
  # > Tving
   - DOMAIN,pip-vod2-xcdn.tving.com
+  - DOMAIN,cj.drmkeyserver.com
+  - DOMAIN,pip-movie-drm-xcdn.tving.com
  # > iQIYI
   - DOMAIN-SUFFIX,iqiyipic.com
   - DOMAIN-SUFFIX,inter.iqiyi.com
