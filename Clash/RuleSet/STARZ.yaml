@@ -1,0 +1,5 @@
+payload:
+  # > Starz
+  #- PROCESS-NAME,com.bydeluxe.d3.android.program.starz
+  - DOMAIN-SUFFIX,starz.com
+  
