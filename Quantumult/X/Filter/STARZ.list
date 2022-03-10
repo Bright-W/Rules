@@ -1,4 +1,13 @@
 # > STARZ, STARZPLAY
+DOMAIN,mecdn1.starz.com,OTT
 DOMAIN,mecdn2.starz.com,OTT
+DOMAIN,mecdn3.starz.com,OTT
+DOMAIN,mecdn4.starz.com,OTT
+DOMAIN,mecdn5.starz.com,OTT
+DOMAIN,mecdn6.starz.com,OTT
+DOMAIN,mecdn7.starz.com,OTT
+DOMAIN,mecdn8.starz.com,OTT
+DOMAIN,mecdn9.starz.com,OTT
+DOMAIN,mecdn10.starz.com,OTT
 DOMAIN,playauthcontent.starz.com,OTT
 DOMAIN-SUFFIX,starz.com,Starz
