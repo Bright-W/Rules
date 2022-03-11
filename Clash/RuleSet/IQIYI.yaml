@@ -13,4 +13,4 @@ payload:
   #- DOMAIN-SUFFIX,appsflyer.com
   - DOMAIN-KEYWORD,qiyi
   # 爱奇艺检测ip
-  - DOMAIN,cache.video.iqiyi.com
+  #- DOMAIN,cache.video.iqiyi.com
