@@ -2,7 +2,7 @@ payload:
   # > IQIYI
   # USER-AGENT,*QIYI*
   # USER-AGENT,iQiYi*
-  - PROCESS-NAME,com.iqiyi.i18n
+  #- PROCESS-NAME,com.iqiyi.i18n
   - DOMAIN-SUFFIX,iqiyi.com
   #- DOMAIN-SUFFIX,iqiyipic.com
   - DOMAIN-SUFFIX,iq.com
