@@ -6,8 +6,8 @@ DOMAIN-SUFFIX,inter.iq.com,OTT
 //DOMAIN,chuangcachecdnoversea-tw.inter.iq.com,OTT
 //DOMAIN,huaweicdnoversea.inter.iq.com,OTT
 //DOMAIN,huaweicdnoversea.inter.iqiyi.com,OTT
-USER-AGENT,*QIYI*,iQIYI
-USER-AGENT,iQiYi*,iQIYI
+//USER-AGENT,*QIYI*,iQIYI
+//USER-AGENT,iQiYi*,iQIYI
 DOMAIN-SUFFIX,iqiyi.com,iQIYI
 DOMAIN-SUFFIX,iq.com,iQIYI
 DOMAIN-SUFFIX,qy.net,iQIYI
