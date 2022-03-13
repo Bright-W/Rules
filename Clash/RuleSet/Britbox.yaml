@@ -1,0 +1,6 @@
+payload:
+  # > Britbox
+  # PROCESS-NAME,com.britbox.us
+  - DOMAIN-SUFFIX,api.britbox.com
+  - DOMAIN-SUFFIX,live.cf.md.bbci.co.uk
+  - DOMAIN-KEYWORD,comm-live.akamaized.net
