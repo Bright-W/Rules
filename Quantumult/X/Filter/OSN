@@ -1,0 +1,5 @@
+# > OSN
+DOMAIN-SUFFIX,stream.osn.com,OTT
+DOMAIN-SUFFIX,theplatform.eu,OSN
+DOMAIN,osngatewayapiprod.azure-api.net,OSN
+//DOMAIN,api2.branch.io,OSN
