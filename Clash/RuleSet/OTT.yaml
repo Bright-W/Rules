@@ -52,3 +52,5 @@ payload:
   - DOMAIN,mecdn8.starz.com
   - DOMAIN,mecdn9.starz.com
   - DOMAIN,mecdn10.starz.com
+  # OSN
+  - DOMAIN-SUFFIX,stream.osn.com
