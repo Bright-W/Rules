@@ -54,3 +54,6 @@ payload:
   - DOMAIN,mecdn10.starz.com
   # OSN
   - DOMAIN-SUFFIX,stream.osn.com
+  # Mytv Super
+  - DOMAIN-SUFFIX,edgeware.tvb.com
+  - DOMAIN,img.tvb.com
