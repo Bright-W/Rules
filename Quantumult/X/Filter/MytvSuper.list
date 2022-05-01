@@ -1,0 +1,5 @@
+# > Mytv Super
+DOMAIN-SUFFIX,edgeware.tvb.com,OTT
+DOMAIN,img.tvb.com,OTT
+DOMAIN-SUFFIX,tvb.com,MytvSuper
+DOMAIN-SUFFIX,mytvsuper.com,MytvSuper
