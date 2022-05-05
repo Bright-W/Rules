@@ -3,14 +3,15 @@ payload:
   # USER-AGENT,*QIYI*
   # USER-AGENT,iQiYi*
   - PROCESS-NAME,com.iqiyi.i18n
+  - PROCESS-NAME,com.iqiyi.i18n.tv
   - DOMAIN-SUFFIX,iqiyi.com
   #- DOMAIN-SUFFIX,iqiyipic.com
   - DOMAIN-SUFFIX,iq.com
-  - DOMAIN-SUFFIX,qy.net
-  - DOMAIN-SUFFIX,gitv.tv
-  - DOMAIN-SUFFIX,71.am
+  #- DOMAIN-SUFFIX,qy.net
+  #- DOMAIN-SUFFIX,gitv.tv
+  #- DOMAIN-SUFFIX,71.am
   #- DOMAIN-SUFFIX,pangle.io
   #- DOMAIN-SUFFIX,appsflyer.com
-  - DOMAIN-KEYWORD,qiyi
+  #- DOMAIN-KEYWORD,qiyi
   # 爱奇艺检测ip
   #- DOMAIN,cache.video.iqiyi.com
