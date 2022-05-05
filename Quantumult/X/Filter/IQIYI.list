@@ -10,9 +10,9 @@ DOMAIN-SUFFIX,inter.iq.com,OTT
 //USER-AGENT,iQiYi*,iQIYI
 DOMAIN-SUFFIX,iqiyi.com,iQIYI
 DOMAIN-SUFFIX,iq.com,iQIYI
-DOMAIN-SUFFIX,qy.net,iQIYI
-DOMAIN-SUFFIX,gitv.tv,iQIYI
-DOMAIN-SUFFIX,71.am,iQIYI
-DOMAIN-KEYWORD,qiyi,iQIYI
+//DOMAIN-SUFFIX,qy.net,iQIYI
+//DOMAIN-SUFFIX,gitv.tv,iQIYI
+//DOMAIN-SUFFIX,71.am,iQIYI
+//DOMAIN-KEYWORD,qiyi,iQIYI
 # 爱奇艺检测ip
-DOMAIN,cache.video.iqiyi.com,iQIYI
+//DOMAIN,cache.video.iqiyi.com,iQIYI
