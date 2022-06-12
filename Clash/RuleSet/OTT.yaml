@@ -58,3 +58,7 @@ payload:
   # Mytv Super
   - DOMAIN-SUFFIX,edgeware.tvb.com
   - DOMAIN,img.tvb.com
+  # Discovery plus PH
+  - DOMAIN,ap2-prod-images.disco-api.com
+  - DOMAIN,dplus-ph-prod-vod.akamaized.net
+  - DOMAIN,dplus-ph-google-v2.prod-vod.h264.io
