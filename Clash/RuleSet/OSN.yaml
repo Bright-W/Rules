@@ -2,5 +2,6 @@ payload:
   # > OSN
   #- PROCESS-NAME,com.osn.go
   - DOMAIN-SUFFIX,theplatform.eu
+  - DOMAIN,api.id.osn.com
   - DOMAIN,osngatewayapiprod.azure-api.net
   #- DOMAIN,api2.branch.io
