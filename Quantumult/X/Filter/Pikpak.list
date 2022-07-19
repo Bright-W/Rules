@@ -1,0 +1,18 @@
+# NAME: PikPak
+HOST-SUFFIX,mypikpak.com,PikPak
+HOST-SUFFIX,config.mypikpak.com,PikPak
+HOST-SUFFIX,user.mypikpak.com,PikPak
+HOST-SUFFIX,static.mypikpak.com,PikPak
+HOST-SUFFIX,hubciddata.sandai.net,PikPak
+HOST-SUFFIX,dlandroid.rcv.sandai.net,PikPak
+HOST-SUFFIX,hub5pr.v6.phub.sandai.net,PikPak
+HOST-SUFFIX,hub5idx.v6.shub.sandai.net,PikPak
+HOST-SUFFIX,hub5pn.wap.sandai.net,PikPak
+HOST-SUFFIX,hub5pnc.sandai.net,PikPak
+HOST-SUFFIX,api-drive.mypikpak.com,PikPak
+HOST-SUFFIX,vod0049-aliyun18-vip-lixian.mypikpak.com,PikPak
+HOST-SUFFIX,vod0050-aliyun18-vip-lixian.mypikpak.com,PikPak
+HOST-SUFFIX,vod0051-aliyun18-vip-lixian.mypikpak.com,PikPak
+HOST-SUFFIX,vod0393-aliyun18-vip-lixian.mypikpak.com,PikPak
+HOST-SUFFIX,vod0395-aliyun18-vip-lixian.mypikpak.com,PikPak
+#HOST-KEYWORD,mypikpak,PikPak
