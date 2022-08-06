@@ -181,6 +181,29 @@ dns:
       - 'telegra.ph'
       - 'youtu.be'
 
+  # Lookup domains via specific nameservers
+  nameserver-policy:
+    # Alibaba
+    '*.alibaba.cn': '223.5.5.5'
+    '*.alibaba.com.cn': '223.5.5.5'
+    '*.china.alibaba.com': '223.5.5.5'
+    '*.1688.com': '223.5.5.5'
+    '*.taobao.com': '223.5.5.5'
+    '*.tbcache.com': '223.5.5.5'
+    '*.tmall.com': '223.5.5.5'
+    '*.alicdn.com': '223.5.5.5'
+    '*.aliyundrive.com': '223.5.5.5'
+    '*.aliyun.*': '223.5.5.5'
+    '*.aliyuncdn.*': '223.5.5.5'
+    '*.aliyunddos????.com': '223.5.5.5'
+    '*.aliyuncs.com': '223.5.5.5'
+    '*.aliyundunwaf.com': '223.5.5.5'
+    '*.aliapp.com': '223.5.5.5'
+    '*.aliapp.org': '223.5.5.5'
+    '*.alibabausercontent.com': '223.5.5.5'
+    '*.mmstat.com': '223.5.5.5'
+    'tb.cn': '223.5.5.5'
+
 #
 # https://github.com/Dreamacro/clash/wiki/premium-core-features
 #
