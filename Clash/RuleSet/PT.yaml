@@ -1,0 +1,23 @@
+payload:
+  # > PT
+  #- PROCESS-NAME,bbc.iplayer.android
+  #- DOMAIN-SUFFIX,bbci.co.uk
+  - DOMAIN,hdsky.me
+  - DOMAIN,totheglory.im
+  - DOMAIN,kp.m-team.cc
+  - DOMAIN,springsunday.net
+  - DOMAIN,pterclub.com
+  - DOMAIN,pt.btschool.club
+  - DOMAIN,lemonhd.org
+  - DOMAIN,ourbits.club
+  - DOMAIN,pthome.net
+  - DOMAIN,chdbits.co
+  - DOMAIN,hdhome.org
+  - DOMAIN,pthome.net
+  - DOMAIN,audiences.me
+  - DOMAIN,club.hares.top
+  - DOMAIN,www.beitai.pt
+  - DOMAIN,www.pttime.org
+  - DOMAIN,greatposterwall.com
+  - DOMAIN,pt.eastgame.org
+  - DOMAIN,pt.keepfrds.com
