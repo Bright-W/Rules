@@ -1,6 +1,6 @@
 payload:
   # > PT
-  #- PROCESS-NAME,bbc.iplayer.android
+  - PROCESS-NAME,org.telegram.messenger
   #- DOMAIN-SUFFIX,bbci.co.uk
   - DOMAIN,hdsky.me
   - DOMAIN,totheglory.im
