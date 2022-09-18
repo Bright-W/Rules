@@ -1,6 +1,7 @@
 payload:
   # > PT
   - PROCESS-NAME,org.telegram.messenger
+  - PROCESS-NAME,com.jingdong.app.mall
   #- DOMAIN-SUFFIX,bbci.co.uk
   - DOMAIN,hdsky.me
   - DOMAIN,totheglory.im
