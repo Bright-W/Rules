@@ -3,7 +3,7 @@ payload:
   - PROCESS-NAME,org.telegram.messenger
   - PROCESS-NAME,com.jingdong.app.mall
   - PROCESS-NAME,com.tencent.mm
-  #- DOMAIN-SUFFIX,bbci.co.uk
+  - DOMAIN-SUFFIX,douban.com
   - DOMAIN,hdsky.me
   - DOMAIN,totheglory.im
   - DOMAIN,kp.m-team.cc
