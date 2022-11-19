@@ -2,6 +2,7 @@
 //USER-AGENT,HBOMAX*,HBO MAX
 DOMAIN-SUFFIX,hbomaxcdn.com,OTT
 DOMAIN-SUFFIX,cdn.hbo.com,OTT
+DIMAIN,art-gallery.api.hbo.com,OTT
 DOMAIN-SUFFIX,hbo.com,HBO MAX
 // DOMAIN-SUFFIX,hbogo.com,HBO MAX
 DOMAIN-SUFFIX,hbonow.com,HBO MAX
