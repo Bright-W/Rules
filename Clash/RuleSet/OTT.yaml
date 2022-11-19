@@ -21,6 +21,7 @@ payload:
  # > HBO MAX
   - DOMAIN-SUFFIX,hbomaxcdn.com
   - DOMAIN-SUFFIX,cdn.hbo.com
+  - DOMAIN,art-gallery.api.hbo.com
  # > Tving
   #- DOMAIN,pip-vod2-xcdn.tving.com
   #- DOMAIN,pip-movie-drm-xcdn.tving.com
