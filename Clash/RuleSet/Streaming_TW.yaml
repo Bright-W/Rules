@@ -88,5 +88,8 @@ payload:
   - DOMAIN-SUFFIX,catch.net.tw
   - DOMAIN,applemediaservice.keydelivery.southeastasia.media.azure.net
   - DOMAIN,akamaiendpoint-applemediaservice-aase.streaming.media.azure.net
+  
+  # > Giloo
+  - DOMAIN-SUFFIX,giloo.ist
 
   #- DOMAIN-KEYWORD,.tw
