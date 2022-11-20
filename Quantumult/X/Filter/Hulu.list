@@ -3,4 +3,4 @@ DOMAIN-SUFFIX,hulustream.com,OTT
 DOMAIN-SUFFIX,hulu.com,Hulu
 DOMAIN-SUFFIX,huluim.com,Hulu
 DOMAIN,cws-hulu.conviva.com,Hulu
-DOMAIN,assetshuluimcom-a.akamaihd.net,Hulu
+#DOMAIN,assetshuluimcom-a.akamaihd.net,Hulu
