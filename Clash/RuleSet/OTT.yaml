@@ -22,6 +22,9 @@ payload:
   - DOMAIN-SUFFIX,hbomaxcdn.com
   - DOMAIN-SUFFIX,cdn.hbo.com
   - DOMAIN,art-gallery.api.hbo.com
+ # > Paramount+ Int
+  - DOMAIN-SUFFIX,cbsaavideo.com
+  - DOMAIN-SUFFIX,pplusstatic.com
  # > Hulu
   - DOMAIN-SUFFIX,hulustream.com
  # > Tving
