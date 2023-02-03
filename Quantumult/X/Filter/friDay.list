@@ -1,8 +1,9 @@
 # > friDay
-USER-AGENT,friDay*,friDay
+#USER-AGENT,friDay*,friDay
+DOMAIN,vbmspic.video.friday.tw,OTT
 DOMAIN-SUFFIX,friday.tw,friDay
-DOMAIN-SUFFIX,fridaylogger.com,friDay
+DOMAIN-SUFFIX,fridaylogger.com,OTT
 DOMAIN-SUFFIX,svc.litv.tv,friDay
-DOMAIN,aka01p.akamaized.net,friDay
-DOMAIN,aka02p.akamaized.net,friDay
-DOMAIN,aka36p.akamaized.net,friDay
+DOMAIN,aka01p.akamaized.net,OTT
+DOMAIN,aka02p.akamaized.net,OTT
+DOMAIN,aka36p.akamaized.net,OTT
