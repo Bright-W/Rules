@@ -6,3 +6,5 @@ payload:
   #- DOMAIN-SUFFIX,canalplus.pro
   #- DOMAIN-SUFFIX,canalplus-bo.net
   - DOMAIN-SUFFIX,mycanal-fairplay.akamaized.net
+  - DOMAIN-SUFFIX,canalplus.akamaized.net
+
