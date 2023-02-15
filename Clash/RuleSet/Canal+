@@ -1,0 +1,8 @@
+payload:
+  # > CANAL+
+  #can use EU proxy 
+  #- PROCESS-NAME,com.canal.android.canal
+  - DOMAIN-SUFFIX,canal-plus.com
+  #- DOMAIN-SUFFIX,canalplus.pro
+  #- DOMAIN-SUFFIX,canalplus-bo.net
+  - DOMAIN-SUFFIX,mycanal-fairplay.akamaized.net
