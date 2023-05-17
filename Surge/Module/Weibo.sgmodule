@@ -1,5 +1,6 @@
 #!name= 微博净化
 #!desc=微博官方APP净化
+#!system=ios
 
 [Rule]
 # forked from GitHub.com/xOS/Config
@@ -85,6 +86,7 @@ URL-REGEX,^https?:\/\/wx[0-9]\.sinaimg\.cn\/large\/.+\.gif$,REJECT
 ^https?:\/\/sdkclick\.uve\.weibo\.com\/interface\/sdk\/sdkclick\.php data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
 ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/hot\/repost_daily data="https://hub.nange.cn/Mock/Blank/Blank_Dict.json"
+^https?:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload data="https://hub.qste.com/Mock/Blank/Blank_Dict.json"
 
 [Script]
 # > 微博个人信息
