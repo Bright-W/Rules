@@ -3,14 +3,12 @@
 #!system=ios
 
 [MITM]
-hostname = %INSERT% socketio.ctrip.com,wallet.95516.com,static.zhihu.com,client.app.coc.10086.cn,mbd.baidu.com,api.zhihu.com,www.zhihu.com,appcloud2.zhihu.com,mp.weixin.qq.com,edith.xiaohongshu.com,api.m.jd.com,wmapi.meituan.com,fmapp.chinafamilymart.com.cn,t7z.cupid.iqiyi.com,kjp.cupid.iqiyi.com,boxer.baidu.com,newclient.map.baidu.com,api.coolapk.com,mobile.ximalaya.com,mobwsa.ximalaya.com,mobilehera.ximalaya.com,www.google.com*
+hostname = %INSERT% socketio.ctrip.com,wallet.95516.com,client.app.coc.10086.cn,pgdt.gtimg.cn,*.cp31.ott.cibntv.net,interface*.music.163.com,flowplus.meituan.net,s3plus.meituan.net,ccsp-egmas.sf-express.com,shopic.sf-express.com,api.pinduoduo.com,api.yangkeduo.com,static.zhihu.com,api.coolapk.com,api.gotokeep.com,kad.gotokeep.com,mbd.baidu.com,api.zhihu.com,www.zhihu.com,appcloud2.zhihu.com,mp.weixin.qq.com,edith.xiaohongshu.com,api.m.jd.com,wmapi.meituan.com,fmapp.chinafamilymart.com.cn,t7z.cupid.iqiyi.com,kjp.cupid.iqiyi.com,newclient.map.baidu.com,,www.google.com*
 
 [General]
 force-http-engine-hosts = %APPEND% t7z.cupid.iqiyi.com,kjp.cupid.iqiyi.com
-[Rule]
-# > Apple CDN
-// DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT
 
+[Rule]
 # > Advertising 广告
 RULE-SET,https://raw.githubusercontent.com/HotKids/Rules/master/Surge/RULE-SET/AD.list,REJECT-TINYGIF
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list,REJECT-TINYGIF
@@ -23,21 +21,45 @@ RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ru
 # > Hijacking 运营商劫持或恶意网站
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list,REJECT-TINYGIF
 
-# > 微信公众号
+# > 微信公众号去广告
 // URL-REGEX,^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad\?,REJECT
 
-# > 携程
+# > 携程去广告
 URL-REGEX,^https?:\/\/socketio\.ctrip\.com\/api,REJECT
 
-# > 云闪付
+# > 云闪付去广告
 URL-REGEX,^https?:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
+
+# > 中国移动去广告
+URL-REGEX,https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(init\/startInit|clientUpdate\/getclientUpdate)$,REJECT
+
+# > 腾讯视频去开屏广告
+OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
+
+# > 网易云去广告 by ddgksf2013
+URL-REGEX,^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/(lbs\/gpsStatus\/upload|homepage\/daily\/song\/elf\/notice|ad\/|sp\/flow|ios\/upgrade|link\/position\/show\/resource|resource-exposure\/config|search\/specialkeyword|link\/scene\/show\/resource|search\/default|comment\/feed\/inserted|v1\/content\/exposure\/comment|search\/rcmd\/keyword|search\/default\/keyword|comment\/hotcomment\/collect|middle\/clientcfg\/config|resource-exposure\/activity\/config|vipcenter\/tspopup\/get|search\/chart),REJECT
+
+# > 美团去广告
+URL-REGEX,^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg$,REJECT
+URL-REGEX,^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$,REJECT
+
+# > 顺丰速运去开屏广告
+URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/(appVersion\/detectionUpgrade|ad\/)$,REJECT
+URL-REGEX,^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen,REJECT
+
+# > 拼多多去开屏广告
+URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
 
 # > 屏蔽知乎网页版强制登陆弹窗
 URL-REGEX,^https?:\/\/static\.zhihu\.com\/[^\/]+\/(main|column)\.signflow\.[^.]+.js,REJECT
 
-# > 中国移动 App
-URL-REGEX,^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit,REJECT
-URL-REGEX,^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/clientUpdate\/getclientUpdate$,REJECT
+# > 酷安 屏蔽热词 by ddgksf2013
+URL-REGEX,^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch,REJECT
+
+# > Keep 去广告 by by ddgksf2013
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/(kprime\/v\d\/popups\/primeGuide|cauchy\/growth\/init|search\/v\d\/default,REJECT
+// 开屏
+URL-REGEX,^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad,REJECT
 
 # > Baidu 
 DOMAIN-SUFFIX,ug.baidu.com,REJECT
@@ -52,7 +74,7 @@ URL-REGEX,^https?:\/\/mbd\.baidu\.com\/tcbox,REJECT
 Sub_info = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info.js,timeout=10
 
 # > 知乎去广告 by app2smile
-zhihu_json.js = type=http-response,pattern=^https:\/\/(appcloud2\.zhihu\.com\/v3\/config$|www\.zhihu\.com\/api\/v4\/(answers\/\d+\/recommendations|articles\/\d+\/recommendation)|api\.zhihu\.com\/(topstory\/recommend|commercial_api\/(real_time_launch_v2|app_float_layer$)|questions\/\d+\/feeds\?|v4\/questions\/\d+\/answers\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/zhihu.js
+// zhihu_json.js = type=http-response,pattern=^https:\/\/(appcloud2\.zhihu\.com\/v3\/config$|www\.zhihu\.com\/api\/v4\/(answers\/\d+\/recommendations|articles\/\d+\/recommendation)|api\.zhihu\.com\/(topstory\/recommend|commercial_api\/(real_time_launch_v2|app_float_layer$)|questions\/\d+\/feeds\?|v4\/questions\/\d+\/answers\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/zhihu.js
 
 # > B 站去广告 by app2smile
 // 请使用 B 站净化模块 https://raw.githubusercontent.com/HotKids/Rules/master/Surge/Module/Bilibili.sgmodule
@@ -83,17 +105,17 @@ famijia.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/f
 # > 爱奇艺去开屏广告 by blackmatrix7
 iqiyi_startup.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/(t7z|kjp)\.cupid\.iqiyi\.com\/mixer\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
  
-# > 百度搜索防跳转 App Store by app2smile
-baidu-no-redirect.js = type=http-response,pattern=^https?:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
-
 # > 百度地图去广告 by app2smile
 baidumap_proto.js = type=http-response,pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js
 
-# > 酷安去好物推荐 by Eric
-coolapk.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/\/api\.coolapk\.com\/v6\/feed\/detail.*,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/KA.js
+# > 酷安去广告 by by ddgksf2013
+coolapk.js = type=http-response,pattern=^https?:\/\/api\.coolapk\.com\/v6\/(dataList|main\/indexV8|feed\/(replyList|detail)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js
 
-# > 喜马拉雅去除首页轮盘滚动广告 by ClydeTime
-xmly_ad.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/focus-mobile\/focusPic\/info,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/noFocusAd.js
+# > Keep 去广告 by by ddgksf2013
+// 修改底栏
+// Keep.js = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/(athena\/v\d\/people\/my|config\/v\d\/basic|homepage\/v\d\/tab|nuocha\/course\/v2\/\w+\/preview|sportpage\/sport\/v3\/mysport)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/keepStyle.js
+// 保留底栏
+Keep.js = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/(athena\/v\d\/people\/my|homepage\/v\d\/tab|nuocha\/course\/v2\/\w+\/preview|sportpage\/sport\/v3\/mysport)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/keepStyle.js
 
 # > 避免 Google 搜索可能出现的人机验证 by NobyDa
 Google_CAPTCHA.js = type=http-response,pattern=^https:\/\/www\.google\.com(\.[a-z]+|)\/search\?q=,requires-body=1,debug=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js,max-size=0,timeout=10,ability=http-client-policy,argument=^(🇸🇬|🇭🇰)\s.*\d+$
