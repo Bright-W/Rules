@@ -74,3 +74,5 @@ payload:
   - DOMAIN,aka01p.akamaized.net,OTT
   - DOMAIN,aka02p.akamaized.net,OTT
   - DOMAIN,aka36p.akamaized.net,OTT
+  # Peacock
+  - DOMAIN-SUFFIX,cdn.peacocktv.com
