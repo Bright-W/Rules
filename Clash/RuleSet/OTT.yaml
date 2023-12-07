@@ -70,9 +70,9 @@ payload:
   - DOMAIN,dplus-ph-google-v2.prod-vod.h264.io
   # friDay
   - DOMAIN,vbmspic.video.friday.tw
-  - DOMAIN-SUFFIX,fridaylogger.com,OTT
-  - DOMAIN,aka01p.akamaized.net,OTT
-  - DOMAIN,aka02p.akamaized.net,OTT
-  - DOMAIN,aka36p.akamaized.net,OTT
+  - DOMAIN-SUFFIX,fridaylogger.com
+  - DOMAIN,aka01p.akamaized.net
+  - DOMAIN,aka02p.akamaized.net
+  - DOMAIN,aka36p.akamaized.net
   # Peacock
   - DOMAIN-SUFFIX,cdn.peacocktv.com
