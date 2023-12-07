@@ -1,5 +1,5 @@
 # > Peacock
 #USER-AGENT,peacock*,Peacock
-DOMAIN,video-ads-module.ad-tech.nbcuni.com,reject
+DOMAIN-SUFFIX,ad-tech.nbcuni.com,reject
 DOMAIN-SUFFIX,cdn.peacocktv.com,OTT
 DOMAIN-SUFFIX,peacocktv.com,Peacock
