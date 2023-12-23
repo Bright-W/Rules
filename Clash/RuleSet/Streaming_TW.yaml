@@ -113,3 +113,5 @@ payload:
   # > Giloo
   - DOMAIN-SUFFIX,giloo.ist
 
+  # > Readmoo
+  - DOMAIN-SUFFIX,readmoo.com
