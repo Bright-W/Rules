@@ -76,3 +76,8 @@ payload:
   - DOMAIN,aka36p.akamaized.net
   # Peacock
   - DOMAIN-SUFFIX,cdn.peacocktv.com
+  # myVideo
+  - DOMAIN,dache.myvideo.net.tw
+  - DOMAIN,vodstrm.myvideo.net.tw
+  - DOMAIN,hlsstrm2.myvideo.net.tw
+  - DOMAIN,img.myvideo.net.tw
