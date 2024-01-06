@@ -3,5 +3,5 @@
 DOMAIN-SUFFIX,canal-plus.com,CANAL+
 //DOMAIN-SUFFIX,canalplus.pro,OTT
 //DOMAIN-SUFFIX,canalplus-bo.net,OTT
-DOMAIN-KEYWORD,mycanal-fairplay.akamaized.net,OTT
-DOMAIN-KEYWORD,canalplus.akamaized.net,OTT
+DOMAIN-KEYWORD,mycanal-fairplay.akamaized.net,CANAL+
+DOMAIN-KEYWORD,canalplus.akamaized.net,CANAL+
