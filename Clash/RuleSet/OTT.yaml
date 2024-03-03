@@ -22,6 +22,10 @@ payload:
   - DOMAIN-SUFFIX,hbomaxcdn.com
   - DOMAIN-SUFFIX,cdn.hbo.com
   - DOMAIN,art-gallery.api.hbo.com
+ # > MAX
+  - DOMAIN-SUFFIX,prd.media.h264.io
+  - DOMAIN-SUFFIX,cdn.prd.api.discomax.com
+  - DOMAIN-SUFFIX,cdn-media.brightline.tv
  # > Paramount+ Int
   - DOMAIN-SUFFIX,cbsaavideo.com
   - DOMAIN-SUFFIX,pplusstatic.com
