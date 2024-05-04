@@ -5,6 +5,7 @@
 //USER-AGENT,ParamountPlus*,Paramount+
 DOMAIN-SUFFIX,cbsi.com,Paramount+
 //播放
+DOMAIN-SUFFIX,cbsivideo.com,OTT
 DOMAIN-SUFFIX,cbsaavideo.com,OTT
 DOMAIN-SUFFIX,pplusstatic.com,OTT
 DOMAIN-SUFFIX,cbsivideo.com,Paramount+
