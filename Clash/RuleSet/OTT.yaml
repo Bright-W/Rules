@@ -26,7 +26,9 @@ payload:
   - DOMAIN-SUFFIX,prd.media.h264.io
   - DOMAIN-SUFFIX,cdn.prd.api.discomax.com
   - DOMAIN-SUFFIX,cdn-media.brightline.tv
- # > Paramount+ Int
+ # > Paramount+
+  - DOMAIN,ads.play.cbsi.video
+  - DOMAIN-SUFFIX,cbsivideo.com
   - DOMAIN-SUFFIX,cbsaavideo.com
   - DOMAIN-SUFFIX,pplusstatic.com
  # > Hulu
