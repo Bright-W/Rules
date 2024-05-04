@@ -9,7 +9,7 @@ DOMAIN-SUFFIX,cbsivideo.com,OTT
 DOMAIN-SUFFIX,cbsaavideo.com,OTT
 DOMAIN-SUFFIX,pplusstatic.com,OTT
 DOMAIN,ads.play.cbsi.video,OTT
-DOMAIN-SUFFIX,cbsivideo.com,Paramount+
+//DOMAIN-SUFFIX,cbsivideo.com,Paramount+
 DOMAIN-SUFFIX,paramountplus.com,Paramount+
 // DOMAIN-SUFFIX,mtvnservices.com,Paramount+ #MTV
 // DOMAIN-SUFFIX,cws.conviva.com,Paramount+
