@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% *.wxs.qq.com,mp.weixin.qq.com,wallet.95516.com,gab.122.gov.cn,res.kfc.com.cn,api.pinduoduo.com,api.yangkeduo.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com,static.95508.com,client.app.coc.10086.cn,mcs-mimp-web.sf-express.com,ccsp-egmas.sf-express.com,ucmp-static.sf-express.com,ucmp.sf-express.com,app.dewu.com,*.elemecdn.com,www1.elecfans.com,acs.m.taobao.com,api-sams.walmartmobile.cn,api.mcd.cn,static.zhihu.com,appconf.mail.163.com,interface*.music.163.com,httpdns.n.netease.com,ipv4.music.163.com,hc-ssp.sm.cn,api.gotokeep.com,kad.gotokeep.com,42.187.199.248,m.baidu.com,www.baidu.com,newclient.map.baidu.com,yongche.baidu.com,*api.alipan.com,member.alipan.com,*.pan.baidu.com,img.meituan.net,s3plus.meituan.net,wmapi.meituan.com,mall.meituan.com,p0.pipi.cn,api.m.jd.com,home.mi.com,api.coolapk.com,edith.xiaohongshu.com,www.xiaohongshu.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,newclient.map.baidu.com,ad.12306.cn,mobile.12306.cn,m5*.amap.com,sns.amap.com,mkt-gateway.tuhu.cn,cl-gateway.tuhu.cn,api.caiyunapp.com,*.cyapi.cn,magical.api.ddxq.mobi,se-api.djiits.com,home.umetrip.com,startup.umetrip.com,discardrp.umetrip.com,114.115.217.129,xhslink.com
+hostname = %APPEND% *.wxs.qq.com,mp.weixin.qq.com,wallet.95516.com,gab.122.gov.cn,res.kfc.com.cn,api.pinduoduo.com,api.yangkeduo.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com,static.95508.com,client.app.coc.10086.cn,mcs-mimp-web.sf-express.com,ccsp-egmas.sf-express.com,ucmp-static.sf-express.com,ucmp.sf-express.com,app.dewu.com,*.elemecdn.com,www1.elecfans.com,acs.m.taobao.com,api-sams.walmartmobile.cn,api.mcd.cn,static.zhihu.com,appconf.mail.163.com,interface*.music.163.com,httpdns.n.netease.com,ipv4.music.163.com,hc-ssp.sm.cn,api.gotokeep.com,kad.gotokeep.com,42.187.199.248,m.baidu.com,www.baidu.com,newclient.map.baidu.com,yongche.baidu.com,*api.alipan.com,member.alipan.com,*.pan.baidu.com,img.meituan.net,s3plus.meituan.net,wmapi.meituan.com,mall.meituan.com,p0.pipi.cn,api.m.jd.com,home.mi.com,api.coolapk.com,edith.xiaohongshu.com,www.xiaohongshu.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,newclient.map.baidu.com,ad.12306.cn,mobile.12306.cn,m5*.amap.com,oss.amap.com,sns.amap.com,mkt-gateway.tuhu.cn,cl-gateway.tuhu.cn,hfapp-service.qweather.net,magical.api.ddxq.mobi,se-api.djiits.com,home.umetrip.com,startup.umetrip.com,discardrp.umetrip.com,114.115.217.129,xhslink.com
 
 [Rule]
 # > 微信公众号
@@ -35,9 +35,6 @@ URL-REGEX,^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement\/,REJECT
 URL-REGEX,^https?:\/\/elemecdn.com\/.+\/sitemap,REJECT
 URL-REGEX,^https?:\/\/www1.elecfans.com\/www\/delivery,REJECT
 
-# > 高德地图
-URL-REGEX,^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution,REJECT
-
 # > 京东
 URL-REGEX,^https?:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
@@ -67,9 +64,11 @@ URL-REGEX,^https?:\/\/api\.gotokeep\.com\/(ads\/v\d\/ads\/preload|anno\/v\d\/upg
 # > 航旅纵横
 URL-REGEX,^https?:\/\/(home|umerp|discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT
 
-[URL Rewrite]
-# > 将 xhslink.com 短链重定向至 xhslink.icu 防止追踪参数 by chouchoui
-^https?:\/\/xhslink\.com https://xhslink.icu 302
+# > 高德地图
+AND,((URL-REGEX,^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch),(USER-AGENT,AMapiPhone*)),REJECT
+
+# > 小红书
+AND,((PROTOCOL,UDP),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
 
 [Map Local]
 # > 百度首页纯净搜索 
@@ -106,12 +105,12 @@ URL-REGEX,^https?:\/\/(home|umerp|discardrp|startup)\.umetrip\.com\/gateway\/api
 ^https?:\/\/update\.pan\.baidu\.com\/statistics\? data-type=text data="{}" status-code=200
 
 # > 百度地图 by RuCu6
-^https?:\/\/newclient\.map\.baidu\.com\/(client\/crossmarketing\/\?container=du_(aide_module|card_ugc|trip_route_tab)|client\/noticebar\/get|client\/phpui2\/\?qt=ads|grow-engine\/api\/common\/userHome\?)|https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?oem= data-type=text data="{}" status-code=200
-^https?:\/\/yongche\.baidu\.com\/(goorder\/passenger\/notice|gomarketing\/api\/activity\/talos\/activitycard\?|gomarketing\/api\/popup\/getentrancecordovaurl|goorder\/passenger\/baseinfo) data-type=text data="{}" status-code=200
+^https?:\/\/newclient\.map\.baidu\.com\/(client\/(crossmarketing\/\?(container=du_(aide_module|card_ugc|trip_route_tab)|oem=)|noticebar\/get\?|phpui2\/\?qt=ads)|grow-engine\/api\/common\/userHome\?) data-type=text data="{}" status-code=200
+^https?:\/\/yongche\.baidu\.com\/(goorder\/passenger\/(notice|baseinfo)|gomarketing\/api\/(activity\/talos\/activitycard\?|popup\/getentrancecordovareject-dict)) data-type=text data="{}" status-code=200
 
 # > 高德地图 by RuCu6&kokoryh
-^https?:\/\/m5\.amap\.com\/ws\/(shield\/scene\/recommend|valueadded\/weather) data-type=text data="{}" status-code=200
-^https?:\/\/m5-zb\.amap\.com\/ws\/boss\/order_web\/\w{8}_information data-type=text data="#"
+^https?:\/\/m5-zb\.amap\.com\/ws\/(shield\/(search\/new_hotword\??|search_poi\/tips_adv\?|scene\/recommend\?)|faas\/amap-navigation\/(card-service-(car-end|route-plan)|main-page-assets|main-page-location|ridewalk-end-fc)|aos\/main\/page\/product\/list\?|mapapi\/hint_text\/offline_data|message\/notice\/list|valueadded\/weather\/v2\?|boss\/(order\/car\/king_toolbox_car_bubble|tips\/onscene_visual_optimization)) data-type=text data="{}" status-code=200
+^https?:\/\/(os|sn)s\.amap\.com\/ws\/(banner\/lists\/?|msgbox\/pull_mp)\? data-type=text data="{}" status-code=200
 
 # > 网易邮箱大师
 ^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$ data-type=text data="{}" status-code=200
@@ -154,13 +153,13 @@ URL-REGEX,^https?:\/\/(home|umerp|discardrp|startup)\.umetrip\.com\/gateway\/api
 ^https?:\/\/ucmp(-static)?\.sf-express\.com\/proxy\/(wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo|operation-platform\/info-flow-adver\/query|esgcempcore\/member(Goods\/pointMallService\/goodsList|Manage\/memberEquity\/queryRecommendEquity|ActLengthy\/fullGiveActivityService\/fullGiveInfo)) data-type=text data="{}" status-code=200
 
 # > 小红书
-^https?:\/\/(www|edith)\.xiaohongshu\.com\/api\/(sns\/v1\/(surprisebox\/(get_style|open|submit_action)|ads\/resource)|sns\/v2\/hey\/\w+\/hey_gallery|sns\/v3\/note\/guide\?|marketing\/box\/trigger\?) data-type=text data="{}" status-code=200
+^https?:\/\/(www|edith)\.xiaohongshu\.com\/api\/(sns\/(v1\/(surprisebox\/(get_style|open|submit_action)|ads\/resource)|v2\/(guide\/user_banner|hey\/\w+\/hey_gallery)|v3\/note\/guide)|marketing\/box\/trigger\?) data-type=text data="{}" status-code=200
 
 # > 途虎养车
 ^https?:\/\/(cl|mkt)-gateway\.tuhu\.cn\/(cl-common-api\/api\/personalCenter\/getAutoSuperConfig|mlp-product-search-api\/search\/helper\/defaultAndHotWord|mkt-(scene-marketing-service\/api\/scene\/queryScheme|push-message-box\/banner\/cms\/getIndexBanner|cms\/circle\/recommend\/v3)) data-type=text data="{}" status-code=200
 
 # > 彩云天气
-^https?:\/\/starplucker\.cyapi\.cn\/v3\/(config\/cypage\/\w+\/conditions|notification\/message_center|operation\/homefeatures) data-type=text data="{}" status-code=200
+^https?:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? data-type=text data="{}" status-code=200
 
 # > 叮咚买菜
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/(advert\/(startUpScreen|getPreloadAd\?ad_id)|vip\/getVipAd) data-type=text data="{}" status-code=200
@@ -185,37 +184,35 @@ wb_launch.js = type=http-response,requires-body=1,pattern=^https?:\/\/((bootprel
 # > 微信公众号去广告 by NobyDa
 WeChat.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
-# > 小红书去广告&水印 by chouchoui&RuCu6&fmz200
-xiaohongshu_proto.js = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v1\/(note\/(imagefeed|live_photo\/save)|search\/(banner|hot)_list|system_service\/config\?)|v2\/(note\/(feed\?|widgets)|system_service\/splash_config|user\/followings\/followfeed)|v3\/note\/videofeed\?|v4\/(followfeed\?|search\/(hint|trending)\?)|v5\/recommend\/user\/follow_recommend\?|v6\/homefeed\?|v10\/search\/notes\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js,script-update-interval=0
+# > 小红书去广告&水印 by chouchoui&RuCu6
+xiaohongshu_proto.js = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/(note\/(widgets|feed|videofeed|imagefeed|live_photo\/save)|search\/((banner|hot)_list|hint|trending|notes)|system_service\/(config|splash_config)|(user\/followings\/followfeed|followfeed|recommend\/user\/follow_recommend)|homefeed)(\?.*)?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 
-# > 网易云 by Keywos
+# > 网易云 by Keywos&RuCu6
 cloudmusic_tab.js = type=http-response,pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab,requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, argument="{"MY":"{{{漫游}}}","DT":"{{{动态}}}","TJ":"{{{推荐}}}","FX":"{{{发现}}}"}"
 cloudmusic_home.js = type=http-response,pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)),requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, argument="{"PRGG":"{{{问候语}}}","PRDRD":"{{{每日推荐}}}","PRSCVPT":"{{{推荐歌单}}}","PRST":"{{{最近常听}}}","HMPR":"{{{音乐合伙人}}}","PRRR":"{{{雷达歌单}}}","PRRK":"{{{排行榜}}}","PRMST":"{{{推荐专属歌单}}}","PRCN":"{{{你的专属歌单}}}"}"
 cloudmusic_proto.js = type=http-response,pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get|link\/page\/discovery\/resource\/show|link\/position\/show\/resource|song\/play\/more\/list\/v\d|user\/follow\/users\/mixed\/get),requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
 
 # > 京东去广告 by RuCu6
-jd_proto.js = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js
+jd_proto.js = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/jingdong.js
 
 # > 阿里云盘 by RuCu6
-alidrive_proto.js = type=http-response,pattern=^https?:\/\/((biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets)|member\.alipan\.com\/v1\/users\/onboard),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js
+alidrive_proto.js = type=http-response,pattern=^https?:\/\/((member|(biz)?api)\.alipan\.com)\/(apps\/v\d\/users?\/home\/(news|widgets)|v1\/users\/onboard_list),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/adrive.js
 
 # > 百度网盘 by RuCu6
 baidudrive_proto.js = type=http-response,pattern=^https?:\/\/pan\.baidu\.com\/api\/getsyscfg\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 
 # > 百度地图 by RuCu6
-baidumap_proto.js = type=http-response,pattern=^https?:\/\/newclient\.map\.baidu\.com\/client\/(imap\/dl\/s\/UpdateInfo\.php\?|usersystem\/mine\/page\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/map.js
+baidumap_proto.js = type=http-response,pattern=^https?:\/\/newclient\.map\.baidu\.com\/client\/(imap\/dl\/s\/UpdateInfo\.php\?|usersystem\/mine\/page\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bdmap.js
 
 # > 高德地图 by RuCu6&kokoryh
-amdc.js = type=http-response,pattern=^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
-amap_proto.js = type=http-response,pattern=^https?:\/\/m5(-zb)?\.amap\.com\/ws\/(shield\/(search\/(new_hotword|nearbyrec_smart)|dsp\/profile\/index\/nodefaas|frogserver\/aocs\/updatable)|valueadded\/alimama\/splash_screen|faas\/amap-navigation\/main-page|message\/notice\/list|promotion-web\/resource),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js
-amap_banner.js = type=http-response,pattern=^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js
+amap_proto.js = type=http-response,pattern=^https?:\/\/m5(-zb)?\.amap\.com\/ws\/(aos\/perception\/publicTravel\/beforeNavi\?|bus\/plan\/integrate\?|c3frontend\/af-(hotel|launch)\/page\/main\?|perception\/drive\/(routeInfo|routePlan)|shield\/(search\/(common\/coupon\/info|poi\/detail|nearbyrec_smart\?)|search_bff\/hotword\?|search_business\/process\/marketingOperationStructured\?|search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)|frogserver\/aocs\/updatable\/1\?|dsp\/profile\/index\/nodefaasv3\?)|faas\/amap-navigation\/(card-service-plan-home|main-page)|valueadded\/alimama\/splash_screen\?|boss\/(car\/order\/content_info|order_web\/friendly_information)|promotion-web\/resource(\/home)?\?|sharedtrip\/taxi\/order_detail_car_tips\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/amap.js
 
 # > 酷安去广告 by RuCu6
-coolapk_proto.js = type=http-response,pattern=^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(detail|replyList)\?|main\/(dataList|indexV8|init)|page\/dataList\?)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
+coolapk_proto.js = type=http-response,pattern=^https?:\/\/api\.coolapk\.com\/v6\/(feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/coolapk.js
 
-# > 12306 开屏广告 by RuCu6&lodepuly
-12306_splash.js = type=http-response,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/12306/12306_remove_splashscreen_ads.js
-12306_proto.js = type=http-response,pattern=^https?:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/12306/12306_remove_ads.js
+# > 12306 开屏广告 by RuCu6
+12306_splash.js = type=http-response,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/12306.js
+12306_proto.js = type=http-response,pattern=^https?:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/header.js
 
 # > Keep 去广告 by ddgksf2013
 // 修改底栏
@@ -226,8 +223,5 @@ keep_proto.js = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/(athe
 # > 途虎养车 by ZenmoFeiShi
 tuhu_proto.js = type=http-response,pattern=^https?:\/\/cl-gateway\.tuhu\.cn\/cl-(shop-api\/shopTab\/getModuleForC|homepage-service\/homePage\/getHomePageInfo|common-api\/api\/personalCenter\/getCmsModuleList),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/TH.js
 
-# > 彩云天气 by RuCu6
-caiyun_proto.js = type=http-response,pattern=^https?::\/\/(api\.caiyunapp\.com|wrapper\.cyapi\.cn)\/v1\/(activity|nafp\/origin_images|satellite)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
-
-# > 航旅纵横
+# > 航旅纵横 by lodepuly
 umetrip_proto.js = type=http-response,pattern=^https?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js

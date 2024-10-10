@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %INSERT% api.m.jd.com,passport.iqiyi.com,*.bilibili.com,xmc.ximalaya.com,mcs-mimp-web.sf-express.com,auth.alipan.com,auth.aliyundrive.com,game.dominos.com.cn,qmwebapi.qmai.cn,webapi.qmai.cn
+hostname = %INSERT% api.m.jd.com,passport.iqiyi.com,*.bilibili.com,xmc.ximalaya.com,mcs-mimp-web.sf-express.com,auth.alipan.com,auth.aliyundrive.com,game.dominos.com.cn
 
 [Rule]
 DOMAIN,gslbali.ximalaya.com,REJECT
@@ -30,11 +30,8 @@ Cookie: 哔哩哔哩漫画 = type=http-request,pattern=^https?:\/\/app\.bilibili
 // Cookie: 顺丰速运_小程序 = type=http-request,pattern=^https?:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+,script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js,requires-body=1, timeout=60
 
 # > 达乐美披萨小游戏 GetCookie by Sliverkiss
-Cookie: 达乐美小游戏 = type=http-request,pattern=^https?\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone,script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js,requires-body=1,timeout=10
+Cookie: 达乐美小游戏 = type=http-request,pattern=^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone,script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js,requires-body=1,timeout=10
 
 # > 阿里云盘 GetCookie by lowking
 // https://auth.aliyundrive.com/v2/account/token
 Cookie: 阿里云盘 = type=http-response,pattern=^https?:\/\/auth\.(aliyundrive|alipan)\.com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,requires-body=1
-
-# > 霸王茶姬小程序 GetCookie by Guding88
-Cookie: 霸王茶姬小程序 = type=http-request,pattern=^https?:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering2-apiserver\/customer-suggest\/query-feedback-config|catering\/crm\/points-info),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js
