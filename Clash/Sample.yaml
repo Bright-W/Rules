@@ -301,14 +301,23 @@ proxy-groups:
   # 去广告以及隐私追踪保护、反运营商劫持开关
   - name: "🚧 AdGuard"
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hijacking.png
+    proxies:
+      - ⛔️ REJECT
+      - 🔘 DIRECT
+      
+  # 阻止
+  - name: "⛔️ REJECT"
+    type: select
+    hidden: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Reject.png
     proxies:
       - REJECT
-      - DIRECT
 
   # 直连
   - name: "🔘 DIRECT"
     type: select
+    hidden: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png
     proxies:
       - DIRECT
@@ -418,19 +427,19 @@ rule-providers:
     path: ./Provider/RuleSet/Streaming/Streaming_US.yaml
     url: https://raw.githubusercontent.com/HotKids/Rules/master/Clash/RuleSet/Streaming_US.yaml
     interval: 86400
-
-  Streaming SEA:
-    type: http
-    behavior: classical
-    path: ./Provider/RuleSet/Streaming/Streaming_SEA.yaml
-    url: https://raw.githubusercontent.com/HotKids/Rules/master/Clash/RuleSet/Streaming_SEA.yaml
-    interval: 86400
     
   Streaming:
     type: http
     behavior: classical
     path: ./Provider/RuleSet/Streaming/Streaming.yaml
     url: https://raw.githubusercontent.com/HotKids/Rules/master/Clash/RuleSet/Streaming.yaml
+    interval: 86400
+
+  CNTV:
+    type: http
+    behavior: classical
+    path: ./Provider/RuleSet/Streaming/CNTV.yaml
+    url: https://raw.githubusercontent.com/HotKids/Rules/master/Clash/RuleSet/CNTV.yaml
     interval: 86400
     
   Apple CDN:
@@ -498,9 +507,11 @@ rules:
   - RULE-SET,Streaming TW,🇨🇳 Taiwan
   - RULE-SET,Streaming JP,🇯🇵 Japan
   - RULE-SET,Streaming US,🇺🇸 America
-  - RULE-SET,Streaming SEA,📺 CNTV
   - RULE-SET,Streaming,🎬 Streaming
-
+  
+  # CNTV
+  - RULE-SET,CNTV,📺 CNTV
+  
   # Apple
   - RULE-SET,Apple CDN,🔘 DIRECT
   - RULE-SET,Apple,🍎 Apple

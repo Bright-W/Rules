@@ -1,5 +1,9 @@
 payload:
   ## GenAI
+  # Cloudflare
+  # > AI Gateway
+  - DOMAIN,gateway.ai.cloudflare.com
+  
   # OpenAI
   # > ChatGPT
   - DOMAIN-SUFFIX,chatgpt.com
@@ -25,8 +29,9 @@ payload:
   # Anthropic
   # > Claude
   - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claudeusercontent.com
   - DOMAIN-SUFFIX,anthropic.com
-
+  
   # Google
   # > Gemini
   - DOMAIN,ai.google.dev
